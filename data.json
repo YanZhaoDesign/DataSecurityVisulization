@@ -1,0 +1,256 @@
+{
+    "Digital-Data": [
+        "E-Mail",
+        "Photos",
+        "Bank-Info",
+        "Calendar-Event",
+        "Location",
+        "Contact-Info",
+        "Search-History",
+        "Social-Share",
+        "Shopping-Records",
+        "Sport-Data",
+        "Recognized-Devices",
+        "Passwords",
+        "Login-Session",
+        "TimeLine",
+        "Videos",
+        "Personal-Info",
+        "Text-Messages"
+    ],
+
+    "E-Mail": [
+        "Google",
+        "Facebook",
+        "WeChat",
+        "Spotify",
+        "Twitter",
+        "Bank-of-America",
+        "Amazon",
+        "Venmo",
+        "Youtube",
+        "Linkedin",
+        "Cloud",
+        "Skype",
+        "Vimeo",
+        "Slack",
+        "DropBox"
+    ],
+
+    "Photos": [
+        "Google",
+        "Facebook",
+        "Wechat",
+        "Linkedin",
+        "Twitter",
+        "Instagram",
+        "iCloud",
+        "Slack",
+        "DropBox",
+        "Yelp",
+        "YouDao-Dictionary",
+        "Pinterest",
+        "Strava"
+    ],
+
+    "Bank-Info": [
+        "Bank-of-America",
+        "Amazon",
+        "Mint",
+        "Wework",
+        "Google",
+        "Apple-Store",
+        "Uber",
+        "Venmo",
+        "Strava"
+    ],
+
+    "Calendar-Event": [
+        "Google",
+        "Facebook"
+    ],
+
+    "Location": [
+        "Google",
+        "Facebook",
+        "Strava",
+        "Other-Maps",
+        "Wechat",
+        "Yelp",
+        "Twitter",
+        "Uber"
+    ],
+
+    "Contact-Info": [
+        "Google",
+        "Facebook",
+        "Wechat",
+        "Yelp",
+        "Slack",
+        "YouDao-Dictionary",
+        "Linkedin"
+
+    ],
+
+    "Search-History": [
+        "Google",
+        "Facebook",
+        "Yelp",
+        "Instagram",
+        "Youtube",
+        "Wechat",
+        "Twitter",
+        "YouDao-Dictionary",
+        "Amazon",
+        "Pinterest",
+        "Linkedin"
+    ],
+
+    "Social-Share": [
+        "Google",
+        "Facebook",
+        "Wechat",
+        "Venmo",
+        "Strava",
+        "Yelp",
+        "Slack",
+        "YouDao-Dictionary",
+        "Twitter",
+        "Amazon",
+        "Pinterest",
+        "Linkedin"
+    ],
+
+    "Shopping-Records": [
+        "Google",
+        "Amazon",
+        "Bank-of-America",
+        "Mint",
+        "Venmo"
+    ],
+    "Sport-Data": [
+        "Strava"
+    ],
+    "Recognized-Devices": [
+        "Google",
+        "Amazon",
+        "Bank-of-America",
+        "Mint",
+        "Venmo"
+    ],
+    "Passwords": [
+        "Google",
+        "Amazon",
+        "Bank-of-America",
+        "Mint",
+        "Venmo",
+        "Strava",
+        "Mint",
+        "Twitter",
+        "Instagram",
+        "iCloud",
+        "Slack",
+        "DropBox",
+        "Yelp",
+        "YouDao-Dictionary",
+        "Pinterest",
+        "Strava",
+        "Linkedin"
+    ],
+    "Login-Session": [
+        "Google",
+        "Amazon",
+        "Bank-of-America",
+        "Mint",
+        "Venmo",
+        "Mint",
+        "iCloud",
+        "DropBox",
+        "Yelp",
+        "Pinterest",
+        "Linkedin",
+        "Wechat",
+        "Uber",
+        "Spotify"
+    ],
+    "TimeLine": [
+        "Google",
+        "Facebook",
+        "Slack",
+        "Wechat",
+        "Instagram",
+        "YouDao-Dictionary",
+        "Twitter",
+        "Venmo",
+        "Slack"
+    ],
+
+    "Videos": [
+        "Youtube",
+        "Facebook",
+        "Slack",
+        "Wechat",
+        "Instagram",
+        "Twitter",
+        "Vimeo",
+        "Slack"
+    ],
+
+    "Facebook": [
+        "Photos",
+        "Messages",
+        "Social-Share",
+        "E-Mail",
+        "Calendar-Event",
+        "Location",
+        "Contact-Info",
+        "Search-History",
+        "TimeLine",
+        "Videos",
+        "Recognized-Devices",
+        "Passwords",
+        "Login-Session",
+        "2-Step-Verification",
+        "Security-Questions",
+        "Instagram",
+        "Pinterest",
+        "Spotify"
+    ],
+
+    "Amazon": [
+        "Bank-Info",
+        "Personal-Info",
+        "Shopping-Records",
+        "Search-History",
+        "Social-Share",
+        "Facebook",
+        "Pinterest",
+        "Youtube",
+        "Twitter",
+        "Instagram"
+    ],
+
+    "Google": [
+        "Photos",
+        "E-Mail",
+        "Bank-Info",
+        "Calendar-Event",
+        "Location",
+        "Contact-Info",
+        "Search-History",
+        "Social-Share",
+        "TimeLine",
+        "Videos",
+        "Shopping-Records",
+        "Bank-Info",
+        "Recognized-Devices",
+        "Passwords",
+        "Login-Session",
+        "2-Step-Verification",
+        "Security-Questions"
+    ],
+
+    "Bank-of-America": [
+        "Bank-Info"
+    ]
+}

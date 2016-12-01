@@ -1,0 +1,569 @@
+
+<html>
+  <head>
+    <title>Data Security</title>
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+   <style>
+html, 
+body {min-height:100%; padding:0; margin:0;
+      font-family:  Georgia, Serif;
+      font-size: 14px;
+      font-style: oblique;
+}
+#cy {
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  top: 4%;
+ /* bottom: 0px;*/
+  right: 3%;
+  left: 5%;
+  /*z-index: 999;*/
+}
+
+h1 {
+        opacity: 0.5;
+        font-size: 1em;
+      }
+
+    </style>
+  </head>
+  <body style="background-color: #FDD900;">
+  <!-- <body style="background-color:#FDC24E;">  -->
+
+    <div id="cy"></div>
+    <!-- JQuery script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script src="http://marvl.infotech.monash.edu/webcola/cola.v3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/2.7.11/cytoscape.min.js"></script>
+    <script src="cytoscape-cola.js"></script>
+
+<script>
+
+$(document).ready(function($) {
+  // Cytoscape
+  var cy = cytoscape({
+    container: $('#cy')[0],
+    layout: {
+      name: 'cola',
+      infinite: true
+    },
+    // container: document.getElementById('cy'),
+    // boxSelectionEnabled: false,
+
+    style: [
+  		{
+  			selector: 'node',
+  			css: {
+  				'content': 'data(id)',
+          'font-size': 10,
+          'color': '#FBF7A8',
+          'text-valign': 'center',
+          'text-halign': 'center',
+          'text-outline-color': '#177DD7',
+          'text-outline-width': 1,
+
+          'height': 35,
+          'width': 35,
+         // 'background-color': '#2967D3'
+          'background-color': '#177DD7'
+  			}
+  		},
+  		{
+  			selector: 'edge',
+  			css: {
+  				'target-arrow-shape': 'triangle',
+          'opacity': 0.5,
+           'width': 1.,
+           'line-color': '#2967D3'
+  			}
+  		},
+      {
+        selector: 'node#Digital-Data',
+        css: {
+          'font-size': 6,
+          'background-color': '#177DD7',
+          'text-outline-color': '#177DD7',
+          'text-outline-width': 0.5,
+          'height': 30,
+          'width': 30
+        }
+      },
+      // csss style for secuity data
+      {
+        selector: 'node#Recognized-Devices',
+        css: {
+          'background-color': ' #00AE00',
+          'text-outline-color': ' #00AE00',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Passwords',
+        css: {
+          'background-color': ' #00AE00',
+          'text-outline-color': ' #00AE00',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Login-Session',
+        css: {
+          'background-color': ' #00AE00',
+          'text-outline-color': ' #00AE00',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#2-Step-Verification',
+        css: {
+          'background-color': ' #00AE00',
+          'text-outline-color': ' #00AE00',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Security-Questions',
+        css: {
+          'background-color': ' #00AE00',
+          'text-outline-color': ' #00AE00',
+          'height': 35,
+          'width': 35
+        }
+      },
+      //css style for social accounts
+      {
+        selector: 'node#Google',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-image': 'https://www.wired.com/wp-content/uploads/2015/09/google-logo.jpg',
+          //'background-color': '#F7723B',
+          //'text-outline-color': '#F7723B',
+          // 'border-width': 3,
+          // 'border-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Facebook',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/facebook.png',
+          // 'background-color': '#F7723B',
+          // 'text-outline-color': '#F7723B',
+          // 'border-width': 3,
+          // 'border-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Wechat',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/wechat.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Spotify',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/spotify.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Twitter',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/twitter.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Bank-of-America',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/boa.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Amazon',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/amazon.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Venmo',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/venmo.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Youtube',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/YouTube.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Linkedin',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/Linkedin.png',
+          //'background-color': '#F7723B',
+          //'text-outline-color': '#F7723B',
+          // 'border-width': 3,
+          // 'border-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#iCloud',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/icloud.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Skype',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/skype.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Vimeo',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/vimeo.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Slack',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/slack.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#DropBox',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/dropbox.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Strava',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/strava.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Mint',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/mint.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Instagram',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/instagram.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Pinterest',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/pinterest.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Wechat',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/wechat.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#YouDao-Dictionary',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/youdao.png',
+          // 'background-color': '#F7723B',
+          'text-outline-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Yelp',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/yelp.png',
+          // 'background-color': '#F7723B',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Wework',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/WeWork.png',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Apple-Store',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/applestore.png',
+          'height': 35,
+          'width': 35
+        }
+      },
+      {
+        selector: 'node#Uber',
+        css: {
+          'text-opacity' : 0,
+          'background-fit': 'cover',
+          'background-opacity':0,
+          'background-image': 'icons/uber.png',
+          'height': 35,
+          'width': 35
+        }
+      },
+      // {
+      //   selector: 'node#iCloud',
+      //   css: {
+      //     // 'background-color': '#E41F64',
+      //     // 'text-outline-color': '#E41F64',
+      //     'background-color': '#F7723B',
+      //     'text-outline-color': '#F7723B',
+      //     'height': 35,
+      //     'width': 35
+      //   }
+      // },
+
+
+    ]
+  });
+
+  var current = cy.add({
+    group: 'nodes',
+    data: {
+      id: 'Digital-Data',
+      expanded: false
+    }
+  });
+  current.on('click', onclick);
+
+  function expand(node, pre) {
+    var parent = node.id();
+    getChildren(parent, function(children) {
+      if (children && children.length > 0) {
+        if (pre) pre();
+      }
+      console.log(children);
+      for (i in children) {
+        var child = cy.add({
+          group: 'nodes',
+          data: {
+            id: children[i],
+            type: 'child',
+            pnode: node,
+            pid: parent
+          }
+        });
+        cy.add({
+          group: 'edges',
+          data: {
+            id: parent + "-" + children[i],
+            source: parent,
+            target: children[i],
+            pid: parent
+          }
+        });
+        child.on('click', onclick);
+      }
+      if (children && children.length > 0) {
+        node.data('expanded', true);
+        updateLayout();
+      }
+    });
+  }
+
+  function collapse(node, callback) {
+    cy.$('node[!expanded]').animate({
+      position: cy.$('node[?expanded]').position(),
+      duration: 500,
+      easing: 'ease-out',
+      complete: function() {
+        cy.$('node[id != "' + node.id() + '"]').remove();
+        cy.$('edge').remove();
+        node.data('expanded', false);
+        if (callback) callback();
+      }
+    });
+  }
+
+  function onclick(e) {
+    var node = e.cyTarget;
+
+    if (!node.data('expanded')) {
+      var pid = node.data('pid');
+      expand(node, function() {
+        if (node.data('pnode')) {
+          cy.$('node[pid = "' + pid + '"][id != "' + node.id() +'"], node[?expanded]').remove();
+          cy.$('edge[pid = "' + pid + '"]').remove();
+        }
+      });
+    } else {
+      collapse(node, function() {
+        var pnode = node.data('pnode');
+        if (pnode) {
+          node.remove();
+          cy.add(pnode);
+          expand(pnode);
+        }
+      });
+    }
+  }
+
+  function updateLayout() {
+    cy.layout({ name: 'cola', infinite: true, fit: false });
+  }
+  
+  function getChildren(parent, callback) {
+    console.log(parent);
+    $.ajax({
+      url: 'data.json',
+      type:'GET',
+      dataType:'json',
+      error: function(xhr, status, err){
+        console.log("Could not get the data");
+        console.log(err);
+      },
+      success: function(data) {
+        var children = data[parent];
+        //console.log(children);
+        callback(children);
+      }
+    });
+  }
+});
+</script>
+  </body>
+</html>
